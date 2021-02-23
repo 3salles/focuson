@@ -1,0 +1,27 @@
+
+.lifeBar {
+  display: flex;
+  align-items: center;
+}
+
+.lifeBar span {
+  font-size: 1rem;
+  color: var(--red);
+  display: flex;
+  flex-direction: column;
+}
+
+.lifeBar > div{
+  flex: 1;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--red-opacity);
+  margin: 0 1.5rem;
+  position: relative;
+}
+
+.lifeBar > div div {
+  height: 4px;
+  border-radius: 4px;
+  background:var(--red);
+}

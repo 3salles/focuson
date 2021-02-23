@@ -1,0 +1,26 @@
+.experienceBar {
+  display: flex;
+  align-items: center;
+}
+
+.experienceBar span {
+  font-size: 1rem;
+  color: var(--orange);
+  display: flex;
+  flex-direction: column;
+}
+
+.experienceProgress{
+  flex: 1;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--orange-opacity);
+  /* margin: 0 1.5rem;
+  position: relative; */
+}
+
+.experienceProgress > div{
+  height: 4px;
+  border-radius: 4px;
+  background:var(--orange);
+}

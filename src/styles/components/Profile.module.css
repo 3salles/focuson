@@ -7,16 +7,23 @@
   align-items: center;
 }
 
+.avatar p {
+  white-space: nowrap;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: var(--orange);
+}
 
 .avatarImage img {
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0.3rem 0 0 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.3rem 0 0 0.5rem;
 }
 
 .avatarImage {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   border: 0.125rem solid var(--dark-blue);
   background: var(--cyan);
@@ -26,5 +33,10 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.infos strong {
+  font-size: 1.5rem;
+  font-weight: 600;
   color: var(--cyan);
 }

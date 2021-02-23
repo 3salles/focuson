@@ -28,4 +28,5 @@
   color: var(--red);
   display: flex;
   justify-content: space-between;
+  font-size: 1rem;
 }

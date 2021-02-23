@@ -2,6 +2,7 @@
 .lifeBar {
   display: flex;
   align-items: center;
+  padding-top: 0.5rem;
 }
 
 .lifeBar span {
@@ -9,6 +10,7 @@
   color: var(--red);
   display: flex;
   flex-direction: column;
+  padding-right: 0.3rem;
 }
 
 .lifeProgress{

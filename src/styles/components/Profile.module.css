@@ -10,15 +10,8 @@
 .avatar p {
   white-space: nowrap;
   margin-top: 0.5rem;
-  margin-left: 1rem;
   font-size: 1rem;
-  color: var(--orange);
-}
-
-.avatarImage img {
-  width: 4rem;
-  height: 4rem;
-  margin: 0.3rem 0 0 0.5rem;
+  color: var(--white);
 }
 
 .avatarImage {
@@ -27,6 +20,16 @@
   border-radius: 50%;
   border: 0.125rem solid var(--dark-blue);
   background: var(--cyan);
+}
+
+.avatarImage img {
+  width: 4rem;
+  height: 4rem;
+  margin: 0.3rem 0 0 0.5rem;
+}
+
+.levelIcon {
+  color: var(--green);
 }
 
 .infos {

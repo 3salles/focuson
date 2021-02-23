@@ -1,10 +1,12 @@
+import { FaHeart }  from 'react-icons/fa'
+
 import styles from '../styles/components/LifeBar.module.css'
 
 export function LifeBar() {
   return (
     <>
     <div className={ styles.lifeBar }>
-      <span>S2</span>
+      <span><FaHeart /></span>
       <div className={styles.lifeProgress}>
         <div style={{ width: '100%'}} />
       </div>

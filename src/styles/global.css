@@ -3,6 +3,8 @@
   --white: #FFFF;
   --orange: #DD7744;
   --orange-opacity: rgba(221, 119, 68, 0.5);
+  --red: #D73B47;
+  --red-opacity: rgba(215, 59, 71, 0.5)
 }
 * {
   margin: 0;
@@ -64,6 +66,32 @@ a {
   background:var(--orange);
 }
 
+.life-bar {
+  display: flex;
+  align-items: center;
+}
+
+.life-bar span {
+  font-size: 1rem;
+  color: var(--red);
+  display: flex;
+  flex-direction: column;
+}
+
+.life-bar > div{
+  flex: 1;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--red-opacity);
+  margin: 0 1.5rem;
+  position: relative;
+}
+
+.life-bar > div div {
+  height: 4px;
+  border-radius: 4px;
+  background:var(--red);
+}
 
 
 @media(max-width: 1080px){

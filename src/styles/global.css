@@ -45,6 +45,8 @@ a {
 .experience-bar span {
   font-size: 1rem;
   color: var(--orange);
+  display: flex;
+  flex-direction: column;
 }
 
 .experience-bar > div{
@@ -61,7 +63,6 @@ a {
   border-radius: 4px;
   background:var(--orange);
 }
-
 
 
 

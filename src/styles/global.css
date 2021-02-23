@@ -7,6 +7,9 @@
   --red-opacity: rgba(215, 59, 71, 0.5);
   --cyan: #3BD7CB;
   --dark-blue: #3B95D7;
+  --green: #5F9D4F;
+  --dark-green: #406A35;
+  --black: #000;
 }
 * {
   margin: 0;

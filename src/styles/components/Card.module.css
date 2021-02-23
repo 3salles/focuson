@@ -1,0 +1,6 @@
+.cardContainer {
+  width: 100%;
+  background: radial-gradient(100% 98.18% at 0% 1.82%, rgba(57, 35, 56, 0.42) 0%, rgba(57, 35, 56, 0.06) 100%);
+  backdrop-filter: blur(12px);
+  padding: 3.75rem;
+}

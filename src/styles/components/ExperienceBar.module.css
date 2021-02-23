@@ -8,6 +8,7 @@
   color: var(--orange);
   display: flex;
   flex-direction: column;
+  padding-right: 0.3rem;
 }
 
 .experienceProgress{
@@ -15,12 +16,17 @@
   height: 4px;
   border-radius: 4px;
   background: var(--orange-opacity);
-  /* margin: 0 1.5rem;
-  position: relative; */
 }
 
 .experienceProgress > div{
   height: 4px;
   border-radius: 4px;
   background:var(--orange);
+}
+
+.status {
+  color: var(--orange);
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
 }

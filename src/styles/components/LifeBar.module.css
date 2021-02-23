@@ -2,6 +2,7 @@
 .lifeBar {
   display: flex;
   align-items: center;
+  padding-top: 0.5rem;
 }
 
 .lifeBar span {
@@ -9,19 +10,25 @@
   color: var(--red);
   display: flex;
   flex-direction: column;
+  padding-right: 0.3rem;
 }
 
-.lifeBar > div{
+.lifeProgress{
   flex: 1;
   height: 4px;
   border-radius: 4px;
   background: var(--red-opacity);
-  margin: 0 1.5rem;
-  position: relative;
 }
 
-.lifeBar > div div {
+.lifeProgress > div {
   height: 4px;
   border-radius: 4px;
   background:var(--red);
+}
+
+.lifeStatus {
+  color: var(--red);
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
 }

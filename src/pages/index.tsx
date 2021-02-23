@@ -1,20 +1,29 @@
-import { ExperienceBar } from '../components/ExperienceBar'
-import { LifeBar } from '../components/LifeBar'
+import { CompletedChallenges } from '../components/CompletedChallenges'
+import { CountDown } from '../components/Countdown'
 import { Profile } from '../components/Profile'
 
+import Head from 'next/head'
+
 import styles from '../styles/pages/Home.module.css'
+import { Card } from '../components/Card'
+
 
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <>
-      <ExperienceBar />
-      <LifeBar />
-      </>
+      <Head>
+        <title>Início | FocusOn</title>
+      </Head>
 
+      
       <section>
-        <div className={styles.profile}><Profile /></div>
+        <div>
+          <Card />
+          {/* <Profile />
+          <CompletedChallenges />
+          <CountDown /> */}
+        </div>
         <div></div>
       </section>
     </div>

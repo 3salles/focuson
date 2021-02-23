@@ -11,8 +11,8 @@ export function ExperienceBar() {
       
     </div>
     <div className={styles.status}>
-    <span>XP</span>
-    <span>300/600</span>
+    <div>XP</div>
+    <div>300/600</div>
     </div>
     </>
   )

@@ -11,7 +11,7 @@ export function Profile() {
         <img src="https://user-images.githubusercontent.com/62452619/108862320-e0ca5000-75ce-11eb-8778-a2c1b3e01453.png" alt="Female Avatar" />
       </div>
       <div>
-      <p>Level 1</p>
+      <p>Lv. 1</p>
       </div>
       </div>
     </div>

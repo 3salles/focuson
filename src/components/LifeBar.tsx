@@ -1,6 +1,8 @@
+import styles from '../styles/components/LifeBar.module.css'
+
 export function LifeBar() {
   return (
-    <div className="life-bar">
+    <div className={ styles.lifeBar }>
       <span>S2 HP</span>
       <div>
         <div style={{ width: '100%'}} />

@@ -39,60 +39,6 @@ a {
   flex-direction: column;
 }
 
-.experience-bar {
-  display: flex;
-  align-items: center;
-}
-
-.experience-bar span {
-  font-size: 1rem;
-  color: var(--orange);
-  display: flex;
-  flex-direction: column;
-}
-
-.experience-bar > div{
-  flex: 1;
-  height: 4px;
-  border-radius: 4px;
-  background: var(--orange-opacity);
-  margin: 0 1.5rem;
-  position: relative;
-}
-
-.experience-bar > div div {
-  height: 4px;
-  border-radius: 4px;
-  background:var(--orange);
-}
-
-.life-bar {
-  display: flex;
-  align-items: center;
-}
-
-.life-bar span {
-  font-size: 1rem;
-  color: var(--red);
-  display: flex;
-  flex-direction: column;
-}
-
-.life-bar > div{
-  flex: 1;
-  height: 4px;
-  border-radius: 4px;
-  background: var(--red-opacity);
-  margin: 0 1.5rem;
-  position: relative;
-}
-
-.life-bar > div div {
-  height: 4px;
-  border-radius: 4px;
-  background:var(--red);
-}
-
 
 @media(max-width: 1080px){
   html {

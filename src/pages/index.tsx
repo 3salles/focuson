@@ -5,6 +5,8 @@ import { Profile } from '../components/Profile'
 import Head from 'next/head'
 
 import styles from '../styles/pages/Home.module.css'
+import { Card } from '../components/Card'
+
 
 
 export default function Home() {
@@ -13,12 +15,14 @@ export default function Home() {
       <Head>
         <title>Início | FocusOn</title>
       </Head>
+
       
       <section>
         <div>
-          <Profile />
+          <Card />
+          {/* <Profile />
           <CompletedChallenges />
-          <CountDown />
+          <CountDown /> */}
         </div>
         <div></div>
       </section>

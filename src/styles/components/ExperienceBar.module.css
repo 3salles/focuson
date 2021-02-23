@@ -10,16 +10,16 @@
   flex-direction: column;
 }
 
-.experienceBar > div{
+.experienceProgress{
   flex: 1;
   height: 4px;
   border-radius: 4px;
   background: var(--orange-opacity);
-  margin: 0 1.5rem;
-  position: relative;
+  /* margin: 0 1.5rem;
+  position: relative; */
 }
 
-.experienceBar > div div {
+.experienceProgress > div{
   height: 4px;
   border-radius: 4px;
   background:var(--orange);

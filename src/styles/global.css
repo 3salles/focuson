@@ -1,0 +1,27 @@
+:root{
+  --purple: #5D395C;
+  --white: #FFFF;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--purple);
+  color: var(--white);
+}
+
+body, input, textarea, button {
+  font: 400 16px "Noto Sans JP", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

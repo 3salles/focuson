@@ -1,0 +1,106 @@
+:root{
+  --background: #5D395C;
+  --white: #FFFF;
+  --orange: #DD7744;
+  --orange-opacity: rgba(221, 119, 68, 0.5);
+  --red: #D73B47;
+  --red-opacity: rgba(215, 59, 71, 0.5)
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--white);
+}
+
+body, input, textarea, button {
+  font: 400 1rem "Noto Sans JP", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  height: 100vh;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-bar {
+  display: flex;
+  align-items: center;
+}
+
+.experience-bar span {
+  font-size: 1rem;
+  color: var(--orange);
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-bar > div{
+  flex: 1;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--orange-opacity);
+  margin: 0 1.5rem;
+  position: relative;
+}
+
+.experience-bar > div div {
+  height: 4px;
+  border-radius: 4px;
+  background:var(--orange);
+}
+
+.life-bar {
+  display: flex;
+  align-items: center;
+}
+
+.life-bar span {
+  font-size: 1rem;
+  color: var(--red);
+  display: flex;
+  flex-direction: column;
+}
+
+.life-bar > div{
+  flex: 1;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--red-opacity);
+  margin: 0 1.5rem;
+  position: relative;
+}
+
+.life-bar > div div {
+  height: 4px;
+  border-radius: 4px;
+  background:var(--red);
+}
+
+
+@media(max-width: 1080px){
+  html {
+    font-size: 93.75%;
+  }
+}
+@media(max-width: 720px){
+  html {
+    font-size: 87.5%;
+  }
+}

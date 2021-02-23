@@ -11,17 +11,21 @@
   flex-direction: column;
 }
 
-.lifeBar > div{
+.lifeProgress{
   flex: 1;
   height: 4px;
   border-radius: 4px;
   background: var(--red-opacity);
-  margin: 0 1.5rem;
-  position: relative;
 }
 
-.lifeBar > div div {
+.lifeProgress > div {
   height: 4px;
   border-radius: 4px;
   background:var(--red);
+}
+
+.lifeStatus {
+  color: var(--red);
+  display: flex;
+  justify-content: space-between;
 }

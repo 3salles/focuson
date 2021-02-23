@@ -1,4 +1,5 @@
 import { ExperienceBar } from '../components/ExperienceBar'
+import { LifeBar } from '../components/LifeBar'
 
 import styles from '../styles/components/Profile.module.css'
 
@@ -18,6 +19,7 @@ export function Profile() {
     <div className={styles.infos}>
     <strong>DarkIceFoxy</strong>
     <ExperienceBar />
+    <LifeBar />
   </div>
   
   </div>

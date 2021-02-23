@@ -1,0 +1,23 @@
+.countdownContainer {
+  display: flex;
+  align-items: center;
+  color: var(--cyan);
+}
+
+.countdownContainer > div{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 7.5rem;
+  text-align: center;
+}
+
+.countdownContainer > div span{
+  flex: 1;
+}
+
+.countdownContainer > span {
+  font-size: 6.25rem;
+  margin: 0 0.5rem;
+}

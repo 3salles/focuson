@@ -22,7 +22,7 @@
 
 * [About the Project](#book-about-the-project)
   * [Versions](#bookmark-tabs-versions)
-    *[1.0](#label-1.0)
+    * [1.0](#label-1.0)
   * [Layout](#art-layout)
   * [Technologies](#computer-technologies)
   * [Features](#sparkles-features)

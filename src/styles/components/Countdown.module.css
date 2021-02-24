@@ -61,3 +61,7 @@
   border: 1px solid var(--orange);
   cursor: not-allowed;
 }
+
+.icon {
+  margin-left: 0.5rem;
+}

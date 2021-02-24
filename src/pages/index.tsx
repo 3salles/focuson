@@ -1,12 +1,9 @@
-import { CompletedChallenges } from '../components/CompletedChallenges'
-import { CountDown } from '../components/Countdown'
-import { Profile } from '../components/Profile'
+import { Card } from '../components/Card'
+import { ChallengeBox } from '../components/ChallengeBox'
 
 import Head from 'next/head'
 
 import styles from '../styles/pages/Home.module.css'
-import { Card } from '../components/Card'
-
 
 
 export default function Home() {
@@ -20,11 +17,10 @@ export default function Home() {
       <section>
         <div>
           <Card />
-          {/* <Profile />
-          <CompletedChallenges />
-          <CountDown /> */}
         </div>
-        <div></div>
+        <div>
+          <ChallengeBox />
+        </div>
       </section>
     </div>
   )

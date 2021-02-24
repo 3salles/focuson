@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import styles from '../styles/components/Countdown.module.css'
+import { GiSpikedDragonHead } from 'react-icons/gi'
 
 let countdownTimeout: NodeJS.Timeout
 
@@ -54,7 +55,7 @@ export function CountDown() {
           disabled
           className={styles.countdownButton}
         >
-          Concluído
+          Concluído <GiSpikedDragonHead className={styles.icon} />
         </button>
       ) : (
           <>

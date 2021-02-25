@@ -48,6 +48,8 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
 
   function levelUp() {
     setLevel(level + 1)
+    setMaxLife(maxLifeToNextLevel)
+    setCurrentLife(maxLifeToNextLevel)
   }
 
   function startNewChallenge() {

@@ -1,6 +1,6 @@
 import styles from '../styles/components/Card.module.css'
 import { CompletedChallenges } from './CompletedChallenges'
-import { CountDown } from './Countdown'
+import { Countdown } from './Countdown'
 import { Profile } from './Profile'
 
 export function Card() {
@@ -8,7 +8,7 @@ export function Card() {
     <div className={styles.cardContainer}>
       <Profile />
       <CompletedChallenges />
-      <CountDown />
+      <Countdown />
     </div>
   )
 }

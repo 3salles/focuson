@@ -12,6 +12,8 @@ interface Challenge {
 interface ChallengesContextData {
   level: number;
   currentExperience: number;
+  maxLife: number;
+  currentLife: number;
   challengesCompleted: number;
   experienceToNextLevel: number;
   activeChallenge: Challenge;
@@ -29,11 +31,14 @@ export const ChallengesContext = createContext({} as ChallengesContextData)
 
 export function ChallengesProvider({ children }: ChallengesProviderProps) {
   const [level, setLevel] = useState(1);
+  const [maxLife, setMaxLife] = useState(50)
+  const [currentLife, setCurrentLife] = useState(maxLife)
   const [currentExperience, setCurrentExperience] = useState(0)
   const [challengesCompleted, setChallengesCompleted] = useState(0)
   const [activeChallenge, setActiveChallenge] = useState(null)
 
   const experienceToNextLevel = Math.pow((level +1) * 4, 2)
+  const maxLifeToNextLevel = Math.floor(maxLife + (1 * (level/2)))
 
   useEffect(() => {
     Notification.requestPermission()
@@ -53,9 +58,8 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     new Audio('/notification.mp3').play()
 
     if (Notification.permission === 'granted') {
-      new Notification(`${challenge.title}`, {
+      new Notification(`${challenge.title}!`, {
         body: `Valendo ${challenge.amount}xp!`,
-        icon: 'favicon.png'
       })
     }
   }
@@ -87,6 +91,8 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
       value={{
         level,
         currentExperience,
+        maxLife,
+        currentLife,
         challengesCompleted,
         experienceToNextLevel,
         levelUp,

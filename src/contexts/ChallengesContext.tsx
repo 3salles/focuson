@@ -42,9 +42,10 @@ export function ChallengesProvider({
   children,
   ...rest
 }: ChallengesProviderProps) {
+  const MAX_LIFE = 50
   const [level, setLevel] = useState(rest.level ?? 1);
-  const [maxLife, setMaxLife] = useState(10)
-  const [currentLife, setCurrentLife] = useState(maxLife)
+  const [maxLife, setMaxLife] = useState(MAX_LIFE)
+  const [currentLife, setCurrentLife] = useState(rest.currentLife ?? MAX_LIFE)
   const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0)
   const [challengesCompleted, setChallengesCompleted] = useState(rest.currentExperience ?? 0)
 
@@ -52,7 +53,7 @@ export function ChallengesProvider({
   const [isLevelUpModalOpen, setIsLevelUpModalOPen] = useState(false)
 
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2)
-  const maxLifeLevel = Math.floor(maxLife + (1 * (level / 2)))
+
 
   useEffect(() => {
     Notification.requestPermission()
@@ -68,8 +69,7 @@ export function ChallengesProvider({
 
   function levelUp() {
     setLevel(level + 1)
-    setMaxLife(maxLifeLevel)
-    setCurrentLife(maxLifeLevel)
+    setCurrentLife(maxLife)
     setIsLevelUpModalOPen(true)
   }
 
@@ -120,8 +120,8 @@ export function ChallengesProvider({
     setCurrentLife(finalLife)
     if (finalLife <= 0) {
       setLevel(level - 1)
-      setMaxLife(Math.floor(maxLife - (1 * (level/ 2))))
-      setCurrentLife(Math.floor(maxLife - (1 * (level / 2))))
+      setMaxLife(MAX_LIFE)
+      setCurrentLife(MAX_LIFE)
       setCurrentExperience(0)
     }
   }

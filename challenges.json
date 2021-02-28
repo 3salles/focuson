@@ -12,10 +12,10 @@
     "amount": 60
   },
   {
-  	"type": "dragon",
+    "type": "dragon",
     "title" : "Fuja do Dragão",
-  	"description": "O dragão acordou! Para derrotá-lo, beba água!",
-  	"amount": 100
+    "description": "O dragão acordou! Para derrotá-lo, beba água!",
+    "amount": 100
   },
   {
     "type": "dragon",

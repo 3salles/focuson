@@ -132,7 +132,7 @@ The application will be avaible on `http://localhost:3000/`.
 
 ## :page_facing_up: License
 
-This project uses [MIT]() lincense.
+This project uses [MIT](https://github.com/3salles/focuson/blob/main/LICENSE.md) lincense.
 
 ## :bowtie: Credits
 

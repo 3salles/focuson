@@ -34,11 +34,14 @@
     * [Setting Front-end](#wrench-setting-front-end)
     * [Running Front-end](#arrow_forward-running-front-end)
 * [License](#page_facing_up-license)
+* [Credits](#bowtie_credits)
 * [Author](#woman_technologist-author)
 
 ## :book: About The Project
 
 Focus On is a site to keep focused in tasks whith game elements.
+
+You can view the side [here](https://focuson-theta.vercel.app).
 
 ### :bookmark_tabs: Versions
 
@@ -130,6 +133,14 @@ The application will be avaible on `http://localhost:3000/`.
 ## :page_facing_up: License
 
 This project uses [MIT]() lincense.
+
+## :bowtie: Credits
+
+All pixel art used are from
+
+* [Pipoya](https://pipoya.itch.io)
+* [itch.io](https://itch.io)
+* [Craftpix.net](https://craftpix.net)
 
 ## :woman_technologist: Author
 <p align="center">

@@ -51,7 +51,7 @@ O usuário define suas tarefas usando o relógio de Pomodoro e ganha experiênci
 
 Algumas mudanças:
 
-* Barra de Vida - Se o usuário não completar a tarefa, perde pontos de vida.
+* Barra de Vida - Se o usuário não completar a tarefa, perde pontos de vida. Se a vida chegar a zero, o usuário perde 1 nível de experiência e o XP acumulado.
 
 * Rewards - Em cada novo nível, o usuário ganhará recompensas (sem implementação ainda).
 
@@ -79,7 +79,7 @@ Você pode encontrar o layout do projeto nos links abaixo:
   - [x] Barra de Experiência
   - [x] Barra de Vida
   - [x] Cronômetro
-  - [ ] Sistema de Novo Nível
+  - [x] Sistema de Novo Nível
   - [ ] Compartilhar no Twitter
   - [ ] Sistema de Recompensas
   

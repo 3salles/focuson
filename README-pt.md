@@ -35,11 +35,14 @@
     * [Configurando o Front-end](#wrench-configurando-o-front-end)
     * [Rodando o Front-end](#arrow_forward-rodando-o-front-end)
 * [Licença](#page_facing_up-licença)
+* [Créditos](#bowtie_creditos)
 * [Autora](#woman_technologist-autora)
 
 ## :book: Sobre o Projeto
 
 Focus On é um site para manter o foco em tarefas com elementos de jogos.
+
+Você pode acessar ao site [aqui](https://focuson-theta.vercel.app).
 
 ### :bookmark_tabs: Versões
 
@@ -130,6 +133,14 @@ A aplicação estará disponível em `http://localhost:3000/`.
 ## :page_facing_up: Licença
 
 Este projeto está sob a lincença [MIT](https://github.com/3salles/Happy/blob/main/LICENSE).
+
+## :bowtie: Créditos
+
+Todas as artes foram tiradas de
+
+* [Pipoya](https://pipoya.itch.io)
+* [itch.io](https://itch.io)
+* [Craftpix.net](https://craftpix.net)
 
 ## ‍:woman_technologist: Autora
 

@@ -132,7 +132,7 @@ A aplicação estará disponível em `http://localhost:3000/`.
 
 ## :page_facing_up: Licença
 
-Este projeto está sob a lincença [MIT](https://github.com/3salles/Happy/blob/main/LICENSE).
+Este projeto está sob a lincença [MIT](https://github.com/3salles/focuson/blob/main/LICENSE.md).
 
 ## :bowtie: Créditos
 

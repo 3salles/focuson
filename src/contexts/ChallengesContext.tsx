@@ -23,7 +23,6 @@ interface ChallengesContextData {
   startNewChallenge: () => void;
   resetChallenge: () => void;
   completeChallenge: () => void;
-  failChallenge: () => void;
   levelDown: () => void;
   closeLevelUpModal: () => void;
 }
@@ -39,10 +38,10 @@ interface ChallengesProviderProps {
 
 export const ChallengesContext = createContext({} as ChallengesContextData)
 
-export function ChallengesProvider({ 
-  children, 
+export function ChallengesProvider({
+  children,
   ...rest
-  }: ChallengesProviderProps) {
+}: ChallengesProviderProps) {
   const [level, setLevel] = useState(rest.level ?? 1);
   const [maxLife, setMaxLife] = useState(10)
   const [currentLife, setCurrentLife] = useState(maxLife)
@@ -50,10 +49,10 @@ export function ChallengesProvider({
   const [challengesCompleted, setChallengesCompleted] = useState(rest.currentExperience ?? 0)
 
   const [activeChallenge, setActiveChallenge] = useState(null)
-  const [isLevelUpModalOpen, setIsLevelUpModalOPen] =  useState(false)
+  const [isLevelUpModalOpen, setIsLevelUpModalOPen] = useState(false)
 
-  const experienceToNextLevel = Math.pow((level +1) * 4, 2)
-  const maxLifeLevel = Math.floor(maxLife + (1 * (level/2)))
+  const experienceToNextLevel = Math.pow((level + 1) * 4, 2)
+  const maxLifeLevel = Math.floor(maxLife + (1 * (level / 2)))
 
   useEffect(() => {
     Notification.requestPermission()
@@ -74,7 +73,7 @@ export function ChallengesProvider({
     setIsLevelUpModalOPen(true)
   }
 
-  function closeLevelUpModal(){
+  function closeLevelUpModal() {
     setIsLevelUpModalOPen(false)
   }
 
@@ -95,6 +94,7 @@ export function ChallengesProvider({
 
   function resetChallenge() {
     setActiveChallenge(null)
+    levelDown()
   }
 
   function completeChallenge() {
@@ -105,8 +105,8 @@ export function ChallengesProvider({
     const { amount } = activeChallenge
     let finalExperience = currentExperience + amount;
 
-    if (finalExperience >= experienceToNextLevel){
-      finalExperience =  finalExperience - experienceToNextLevel
+    if (finalExperience >= experienceToNextLevel) {
+      finalExperience = finalExperience - experienceToNextLevel
       levelUp()
     }
 
@@ -115,27 +115,15 @@ export function ChallengesProvider({
     setChallengesCompleted(challengesCompleted + 1)
   }
 
-  function failChallenge () {
-    if (!activeChallenge) {
-      return
-    }
-
-    else if (currentLife <= 0){
-      levelDown()
-    }
-
+  function levelDown() {    
     let finalLife = currentLife - 5
     setCurrentLife(finalLife)
-    setActiveChallenge(null)
-  }
-
-  function levelDown() {
-    setLevel(level - 1)
-    if (currentLife <= 0){
-      setMaxLife(maxLifeLevel)
-      setCurrentLife(maxLifeLevel)
+    if (finalLife <= 0) {
+      setLevel(level - 1)
+      setMaxLife(Math.floor(maxLife - (1 * (level/ 2))))
+      setCurrentLife(Math.floor(maxLife - (1 * (level / 2))))
+      setCurrentExperience(0)
     }
-    
   }
 
   return (
@@ -152,7 +140,7 @@ export function ChallengesProvider({
         activeChallenge,
         resetChallenge,
         completeChallenge,
-        failChallenge,
+        // failChallenge,
         levelDown,
         closeLevelUpModal
       }}

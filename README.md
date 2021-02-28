@@ -49,7 +49,7 @@ The user can define task using a Pomodoro counterdown and gain experiencie alway
 
 Some changes:
 
-* Life bar - If the user don't complete a task, will lose HP.
+* Life bar - If the user don't complete a task, will lose HP. If life bar become 0, the user will lost 1 level XP and the amouted XP.
 
 * Rewards - In each level up, the user wins rewards (without deployment yet).
 
@@ -78,7 +78,7 @@ You can acess the project's layout in links below:
   - [x] Experience Bar
   - [x] Life Bar
   - [x] Countdown
-  - [ ] Level Up System
+  - [x] Level Up System
   - [ ] Share on Twitter
   - [ ] Reward System
   

@@ -1,5 +1,7 @@
 import { createContext, useState, ReactNode, useEffect } from 'react'
+import Cookies from 'js-cookie'
 import challenges from '../../challenges.json'
+import { LevelUpModal } from '../components/LevelUpModal';
 
 
 interface Challenge {
@@ -22,34 +24,58 @@ interface ChallengesContextData {
   resetChallenge: () => void;
   completeChallenge: () => void;
   failChallenge: () => void;
+  levelDown: () => void;
+  closeLevelUpModal: () => void;
 }
 
 interface ChallengesProviderProps {
   children: ReactNode;
+  level: number;
+  currentExperience: number;
+  challengesCompleted: number;
+  currentLife: number;
 }
+
 
 export const ChallengesContext = createContext({} as ChallengesContextData)
 
-export function ChallengesProvider({ children }: ChallengesProviderProps) {
-  const [level, setLevel] = useState(1);
-  const [maxLife, setMaxLife] = useState(50)
+export function ChallengesProvider({ 
+  children, 
+  ...rest
+  }: ChallengesProviderProps) {
+  const [level, setLevel] = useState(rest.level ?? 1);
+  const [maxLife, setMaxLife] = useState(10)
   const [currentLife, setCurrentLife] = useState(maxLife)
-  const [currentExperience, setCurrentExperience] = useState(0)
-  const [challengesCompleted, setChallengesCompleted] = useState(0)
+  const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0)
+  const [challengesCompleted, setChallengesCompleted] = useState(rest.currentExperience ?? 0)
+
   const [activeChallenge, setActiveChallenge] = useState(null)
+  const [isLevelUpModalOpen, setIsLevelUpModalOPen] =  useState(false)
 
   const experienceToNextLevel = Math.pow((level +1) * 4, 2)
-  const maxLifeToNextLevel = Math.floor(maxLife + (1 * (level/2)))
+  const maxLifeLevel = Math.floor(maxLife + (1 * (level/2)))
 
   useEffect(() => {
     Notification.requestPermission()
   }, [])
 
+  useEffect(() => {
+    Cookies.set('level', String(level))
+    Cookies.set('currentExperience', String(currentExperience))
+    Cookies.set('challengesCompleted', String(challengesCompleted))
+    Cookies.set('currentLife', String(currentLife))
+
+  }, [level, currentExperience, challengesCompleted, currentLife])
 
   function levelUp() {
     setLevel(level + 1)
-    setMaxLife(maxLifeToNextLevel)
-    setCurrentLife(maxLifeToNextLevel)
+    setMaxLife(maxLifeLevel)
+    setCurrentLife(maxLifeLevel)
+    setIsLevelUpModalOPen(true)
+  }
+
+  function closeLevelUpModal(){
+    setIsLevelUpModalOPen(false)
   }
 
   function startNewChallenge() {
@@ -94,9 +120,22 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
       return
     }
 
+    else if (currentLife <= 0){
+      levelDown()
+    }
+
     let finalLife = currentLife - 5
     setCurrentLife(finalLife)
     setActiveChallenge(null)
+  }
+
+  function levelDown() {
+    setLevel(level - 1)
+    if (currentLife <= 0){
+      setMaxLife(maxLifeLevel)
+      setCurrentLife(maxLifeLevel)
+    }
+    
   }
 
   return (
@@ -113,10 +152,13 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
         activeChallenge,
         resetChallenge,
         completeChallenge,
-        failChallenge
+        failChallenge,
+        levelDown,
+        closeLevelUpModal
       }}
     >
       {children}
+      {isLevelUpModalOpen && <LevelUpModal />}
     </ChallengesContext.Provider>
   )
 }

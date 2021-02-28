@@ -115,7 +115,7 @@ export function ChallengesProvider({
     setChallengesCompleted(challengesCompleted + 1)
   }
 
-  function levelDown() {    
+  function levelDown() {
     let finalLife = currentLife - 5
     setCurrentLife(finalLife)
     if (finalLife <= 0) {

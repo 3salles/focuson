@@ -31,10 +31,10 @@ export default function Home(props: HomeProps) {
 
       <CountdownProvider>
       <section>
-        <div>
+        <div className={styles.card}>
           <Card />
         </div>
-        <div>
+        <div className={styles.challengeBox}>
           <ChallengeBox />
         </div>
       </section>

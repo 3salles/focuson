@@ -28,6 +28,7 @@
   * [Tecnologias](#computer-tecnologias)
   * [Recursos](#sparkles-recursos)
     * [Versão 1.0](#label-versao-1.0)
+    * [Versão 1.5](#label-versao-1.5)
 * [Instalação](#bricks-instalaçao)
   * [Pré-requisitos](#construction-pré-requisitos)
   * [Front-end](#lipstick-front-end)
@@ -56,8 +57,7 @@ Algumas mudanças:
 
 * Barra de Vida - Se o usuário não completar a tarefa, perde pontos de vida. Se a vida chegar a zero, o usuário perde 1 nível de experiência e o XP acumulado.
 
-* Rewards - Em cada novo nível, o usuário ganhará recompensas (sem implementação ainda).
-
+Para armazenar os dados do usuário, este projeto utiliza os Cookies do navegador.
 
 ### :art: Layout
 
@@ -83,8 +83,10 @@ Você pode encontrar o layout do projeto nos links abaixo:
   - [x] Barra de Vida
   - [x] Cronômetro
   - [x] Sistema de Novo Nível
-  - [ ] Compartilhar no Twitter
-  - [ ] Sistema de Recompensas
+
+#### :label: Versão 1.5
+
+  - [x] Layout Responsível
   
 ## :bricks: Instalação
 

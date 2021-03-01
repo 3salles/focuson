@@ -1,5 +1,5 @@
 .overlay{
-  background: rgba(242, 243, 245, 0.8);
+  background: radial-gradient(100% 280.69% at 0% 2.88%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.06) 100%);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -13,7 +13,7 @@
 .container {
   background: radial-gradient(97.86% 116.41% at 2.14% 2.88%, #392338 0%, #392338 100%);
   width: 100%;
-  max-width: 400px;
+  max-width: 25rem;
   padding: 2rem 3rem;
   border-radius: 20px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
@@ -46,4 +46,11 @@
   background: transparent;
   border: 0;
   font-size: 0px;
+}
+
+@media(max-width: 720px){
+  .container {
+    margin-left: 0.62rem;
+    margin-right: 0.62rem;
+  }
 }

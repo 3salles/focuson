@@ -27,6 +27,7 @@
   * [Technologies](#computer-technologies)
   * [Features](#sparkles-features)
     * [Version 1.0](#label-version-1.0)
+    * [Version 1.5](#label-version-1.5)
 * [Installation](#bricks-installation)
   * [Prerequisites](#construction-prerequisites)
   * [Front-end](#lipstick-front-end)
@@ -54,8 +55,6 @@ Some changes:
 
 * Life bar - If the user don't complete a task, will lose HP. If life bar become 0, the user will lost 1 level XP and the amouted XP.
 
-* Rewards - In each level up, the user wins rewards (without deployment yet).
-
 
 ### :art: Layout
 
@@ -82,8 +81,11 @@ You can acess the project's layout in links below:
   - [x] Life Bar
   - [x] Countdown
   - [x] Level Up System
-  - [ ] Share on Twitter
-  - [ ] Reward System
+
+#### :label: Version 1.5
+
+  - [x] Responsive Layout
+
   
 
 ## :bricks: Installation

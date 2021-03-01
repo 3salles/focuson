@@ -1,5 +1,5 @@
 .overlay{
-  background: rgba(242, 243, 245, 0.8);
+  background: radial-gradient(100% 280.69% at 0% 2.88%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.06) 100%);
   position: fixed;
   top: 0;
   bottom: 0;
